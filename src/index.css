@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+ * SNABEL - سنابل
+ * Design System for Vegetable Market Portfolio
+ * 
+ * Color Psychology:
+ * - Primary (Forest Green): Trust, freshness, organic, nature
+ * - Secondary (Warm Orange): Energy, harvest, warmth, appetite
+ * - Accent (Lime): Freshness, vitality, new growth
+ * - Earth tones: Organic, natural, farm-to-table
+ */
+
+@layer base {
+  :root {
+    /* Light Theme - Fresh & Clean */
+    --background: 60 30% 98%;
+    --foreground: 142 40% 12%;
+
+    --card: 60 20% 99%;
+    --card-foreground: 142 40% 12%;
+
+    --popover: 60 20% 99%;
+    --popover-foreground: 142 40% 12%;
+
+    /* Forest Green - Trust & Freshness */
+    --primary: 142 50% 28%;
+    --primary-foreground: 60 30% 98%;
+
+    /* Warm Orange - Harvest & Energy */
+    --secondary: 28 85% 52%;
+    --secondary-foreground: 60 30% 98%;
+
+    --muted: 80 25% 94%;
+    --muted-foreground: 142 15% 45%;
+
+    /* Lime Accent - Fresh Highlights */
+    --accent: 78 70% 45%;
+    --accent-foreground: 142 40% 12%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 30% 98%;
+
+    --border: 80 20% 88%;
+    --input: 80 20% 88%;
+    --ring: 142 50% 35%;
+
+    --radius: 0.75rem;
+    
+    /* Custom Gradients */
+    --nature-gradient: linear-gradient(135deg, hsl(142 50% 28%), hsl(142 45% 38%));
+    --harvest-gradient: linear-gradient(135deg, hsl(28 85% 52%), hsl(40 90% 55%));
+    
+    /* Extended Palette */
+    --leaf: 142 50% 35%;
+    --leaf-light: 80 40% 92%;
+    --earth: 28 45% 30%;
+    --cream: 45 40% 95%;
+    --harvest: 40 90% 55%;
+
+    --sidebar-background: 60 20% 97%;
+    --sidebar-foreground: 142 30% 20%;
+    --sidebar-primary: 142 50% 28%;
+    --sidebar-primary-foreground: 60 30% 98%;
+    --sidebar-accent: 80 30% 94%;
+    --sidebar-accent-foreground: 142 30% 20%;
+    --sidebar-border: 80 20% 88%;
+    --sidebar-ring: 142 50% 35%;
+  }
+
+  .dark {
+    /* Dark Theme - Rich Earth & Forest Night */
+    --background: 142 35% 8%;
+    --foreground: 60 20% 95%;
+
+    --card: 142 30% 12%;
+    --card-foreground: 60 20% 95%;
+
+    --popover: 142 30% 12%;
+    --popover-foreground: 60 20% 95%;
+
+    /* Brighter Green for Dark Mode */
+    --primary: 142 55% 45%;
+    --primary-foreground: 142 35% 8%;
+
+    /* Warm Orange stays vibrant */
+    --secondary: 28 80% 55%;
+    --secondary-foreground: 142 35% 8%;
+
+    --muted: 142 25% 18%;
+    --muted-foreground: 80 15% 65%;
+
+    /* Lime - brighter in dark */
+    --accent: 78 75% 50%;
+    --accent-foreground: 142 35% 8%;
+
+    --destructive: 0 62.8% 40%;
+    --destructive-foreground: 60 20% 95%;
+
+    --border: 142 25% 22%;
+    --input: 142 25% 22%;
+    --ring: 142 55% 45%;
+    
+    /* Dark Theme Extended */
+    --leaf: 142 55% 45%;
+    --leaf-light: 142 30% 18%;
+    --earth: 28 35% 25%;
+    --cream: 45 25% 15%;
+    --harvest: 40 85% 50%;
+
+    --sidebar-background: 142 30% 10%;
+    --sidebar-foreground: 60 15% 92%;
+    --sidebar-primary: 142 55% 45%;
+    --sidebar-primary-foreground: 142 35% 8%;
+    --sidebar-accent: 142 25% 18%;
+    --sidebar-accent-foreground: 60 15% 92%;
+    --sidebar-border: 142 25% 22%;
+    --sidebar-ring: 142 55% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom utility classes for Snabel */
+@layer utilities {
+  .text-gradient-nature {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+  
+  .bg-pattern-leaf {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5c-8 8-12 18-8 25s14 9 22 3c-6-2-10-8-10-15 0-5 2-9 5-12-3-1-6-1-9-1z' fill='%2322c55e' fill-opacity='0.03'/%3E%3C/svg%3E");
+  }
+}

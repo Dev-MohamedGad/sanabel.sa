@@ -1,0 +1,25 @@
+{
+  "name": "سنابل للخضروات والفواكه المجمدة",
+  "short_name": "سنابل",
+  "description": "أفضل الخضروات والفواكه المجمدة في الرياض",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafaf5",
+  "theme_color": "#166534",
+  "orientation": "portrait-primary",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "shopping", "business"],
+  "screenshots": [],
+  "related_applications": [],
+  "prefer_related_applications": false
+}
+
