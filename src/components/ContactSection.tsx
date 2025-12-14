@@ -40,18 +40,30 @@ const ContactSection = () => {
               <div className="p-3 bg-primary rounded-full">
                 <Phone className="w-6 h-6 text-primary-foreground" />
               </div>
-              <div>
+              <div className="flex-1">
                 <h3 className="font-bold text-lg text-primary mb-2">الهاتف / واتساب</h3>
-                <a 
-                  href="https://wa.me/966545173492" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-foreground hover:text-secondary transition-colors flex items-center gap-2"
-                  dir="ltr"
-                >
-                  +966 54 517 3492
-                  <ExternalLink className="w-4 h-4" />
-                </a>
+                <div className="space-y-2">
+                  <a 
+                    href="https://wa.me/966545173492" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-foreground hover:text-secondary transition-colors flex items-center gap-2"
+                    dir="ltr"
+                  >
+                    +966 54 517 3492
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                  <a 
+                    href="https://wa.me/966546715962" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-foreground hover:text-secondary transition-colors flex items-center gap-2"
+                    dir="ltr"
+                  >
+                    +966 54 671 5962
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
               </div>
             </div>
 
