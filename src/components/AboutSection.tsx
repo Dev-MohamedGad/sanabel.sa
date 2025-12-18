@@ -8,7 +8,7 @@ const AboutSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
-  const features = [
+  const features = [=
     {
       icon: ThermometerSnowflake,
       title: "تجميد سريع",
