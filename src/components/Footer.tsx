@@ -22,11 +22,11 @@ const Footer = () => {
             <p className="text-lg font-semibold mb-4">تواصل معنا</p>
             <div className="flex flex-col items-center gap-3 mb-4">
               <a
-                href="tel:+966545173492"
+                href="tel:+966546715962"
                 className="flex items-center gap-2 text-primary-foreground/80 hover:text-white transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                <span dir="ltr">+966 54 517 3492</span>
+                <span dir="ltr">+966 54 671 5962</span>
               </a>
               <address className="not-italic text-primary-foreground/80 text-sm">
                 <div className="flex items-center gap-2 mb-1">
@@ -40,7 +40,7 @@ const Footer = () => {
             </div>
             <div className="flex flex-wrap justify-center gap-3">
               <a
-                href="https://wa.me/966545173492"
+                href="https://wa.me/966546715962"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-green-500 hover:bg-green-600 text-white rounded-full transition-all hover:scale-110 shadow-lg"

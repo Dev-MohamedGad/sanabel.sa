@@ -6,7 +6,7 @@ import aboutImage from "@/assets/1.jpeg";
 
 const AboutSection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   const features = [
     {
@@ -32,10 +32,9 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" ref={ref} className="py-20 bg-leaf-light">
+    <section id="about" ref={ref} className="py-12 sm:py-16 md:py-20 bg-leaf-light">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
@@ -62,7 +61,7 @@ const AboutSection = () => {
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
-              
+
               {/* Floating Badge */}
               <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
                 <span className="text-primary font-bold text-sm">جودة عالية</span>
@@ -106,7 +105,6 @@ const AboutSection = () => {
 
         {/* Features Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-5xl mx-auto"

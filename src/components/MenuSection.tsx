@@ -82,10 +82,10 @@ const menuItems = [
 
 const MenuSection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const isInView = useInView(ref, { once: true, amount: 0 });
 
   return (
-    <section id="menu" ref={ref} className="py-20 bg-background">
+    <section id="menu" ref={ref} className="py-12 sm:py-16 md:py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -118,16 +118,17 @@ const MenuSection = () => {
                   <img
                     src={item.image}
                     alt={item.name}
+                    loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent opacity-60 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300" />
+
                   {/* Category Badge */}
-                  <div className="absolute top-4 right-4 px-3 py-1 bg-secondary text-white text-sm font-medium rounded-full shadow-lg">
+                  <div className="absolute top-4 right-4 px-3 py-1 bg-secondary text-white text-sm font-medium rounded-full shadow-lg z-10">
                     {item.category}
                   </div>
                 </div>
-                <CardContent className="p-6">
+                <CardContent className="p-6 relative">
                   <h3 className="text-2xl font-bold text-primary mb-3">
                     {item.name}
                   </h3>

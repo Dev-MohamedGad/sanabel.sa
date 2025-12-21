@@ -5,13 +5,12 @@ import { Phone, MapPin, Clock, MessageCircle, ExternalLink, Mail, Building } fro
 
 const ContactSection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
-    <section id="contact" ref={ref} className="py-20 bg-background">
+    <section id="contact" ref={ref} className="py-12 sm:py-16 md:py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
@@ -30,7 +29,6 @@ const ContactSection = () => {
 
         <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6"
@@ -43,19 +41,9 @@ const ContactSection = () => {
               <div className="flex-1">
                 <h3 className="font-bold text-lg text-primary mb-2">الهاتف / واتساب</h3>
                 <div className="space-y-2">
-                  <a 
-                    href="https://wa.me/966545173492" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-foreground hover:text-secondary transition-colors flex items-center gap-2"
-                    dir="ltr"
-                  >
-                    +966 54 517 3492
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-                  <a 
-                    href="https://wa.me/966546715962" 
-                    target="_blank" 
+                  <a
+                    href="https://wa.me/966546715962"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-foreground hover:text-secondary transition-colors flex items-center gap-2"
                     dir="ltr"
@@ -80,9 +68,9 @@ const ContactSection = () => {
             </div>
 
             {/* Location - with Schema.org microdata */}
-            <div 
+            <div
               className="flex gap-4 items-start p-6 bg-leaf-light rounded-2xl text-foreground hover:shadow-md transition-shadow"
-              itemScope 
+              itemScope
               itemType="https://schema.org/PostalAddress"
             >
               <div className="p-3 bg-primary rounded-full">
@@ -102,9 +90,9 @@ const ContactSection = () => {
                 <p className="text-muted-foreground text-sm mb-2" itemProp="addressCountry">
                   المملكة العربية السعودية
                 </p>
-                <a 
-                  href="https://maps.app.goo.gl/DRKFq4v6zqJCEHX67" 
-                  target="_blank" 
+                <a
+                  href="https://maps.app.goo.gl/DRKFq4v6zqJCEHX67"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-secondary hover:underline flex items-center gap-1 text-sm font-medium"
                 >
@@ -139,7 +127,7 @@ const ContactSection = () => {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a
-                  href="https://wa.me/966545173492"
+                  href="https://wa.me/966546715962"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-8 py-4 bg-green-500 text-white rounded-full hover:scale-105 transition-transform shadow-lg font-semibold text-lg"
@@ -161,7 +149,6 @@ const ContactSection = () => {
 
         {/* Map */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-12 rounded-2xl overflow-hidden shadow-2xl"

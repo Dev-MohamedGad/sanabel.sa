@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Leaf } from "lucide-react";
+import { Menu, X, Leaf, Home, User, ShoppingBag, Image, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
@@ -8,11 +8,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { label: "الرئيسية", href: "#hero" },
-    { label: "من نحن", href: "#about" },
-    { label: "منتجاتنا", href: "#menu" },
-    { label: "معرض الصور", href: "#gallery" },
-    { label: "تواصل معنا", href: "#contact" },
+    { label: "الرئيسية", href: "#hero", icon: Home },
+    { label: "من نحن", href: "#about", icon: User },
+    { label: "منتجاتنا", href: "#menu", icon: ShoppingBag },
+    { label: "معرض الصور", href: "#gallery", icon: Image },
+    { label: "تواصل معنا", href: "#contact", icon: Phone },
   ];
 
   const scrollToSection = (href: string) => {
@@ -76,14 +76,15 @@ const Navbar = () => {
               exit={{ opacity: 0, height: 0 }}
               className="md:hidden overflow-hidden"
             >
-              <div className="py-4 space-y-3">
+              <div className="py-4 space-y-2 px-4">
                 {menuItems.map((item) => (
                   <button
                     key={item.href}
                     onClick={() => scrollToSection(item.href)}
-                    className="block w-full text-right px-4 py-2 text-foreground hover:bg-primary/10 hover:text-primary rounded-lg transition-colors font-medium"
+                    className="flex items-center justify-end w-full px-4 py-3 text-foreground hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group"
                   >
-                    {item.label}
+                    <span className="text-lg">{item.label}</span>
+                    <item.icon className="w-5 h-5 ml-3 text-muted-foreground group-hover:text-primary transition-colors" />
                   </button>
                 ))}
               </div>
