@@ -51,6 +51,16 @@ const ContactSection = () => {
                     +966 54 671 5962
                     <ExternalLink className="w-4 h-4" />
                   </a>
+                  <a
+                    href="https://wa.me/966570471099"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-foreground hover:text-secondary transition-colors flex items-center gap-2"
+                    dir="ltr"
+                  >
+                    +966 57 047 1099
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
                 </div>
               </div>
             </div>
